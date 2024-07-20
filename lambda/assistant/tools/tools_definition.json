@@ -1,0 +1,51 @@
+[
+  {
+    "toolSpec": {
+      "name": "add_cart",
+      "description": "add items to the shopping cart.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "user_id": {
+              "type": "string",
+              "description": "The id of the user"
+            },
+            "product_id": {
+              "type": "string",
+              "description": "The id of the product"
+            },
+            "quantity": {
+              "type": "string",
+              "description": "The quantity of the product"
+            }
+          },
+          "required": ["user_id","product_id","quantity"]
+        }
+      }
+    }
+  },
+
+  {
+    "toolSpec": {
+      "name": "check_order",
+      "description": "check order base on the user id and order id.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "user_id": {
+              "type": "string",
+              "description": "The id of the use"
+            },
+            "order_id": {
+              "type": "string",
+              "description": "The id of the order"
+            }
+          },
+          "required": ["user_id","order_id"]
+        }
+      }
+    }
+  }
+]

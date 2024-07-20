@@ -1,0 +1,4 @@
+aws-cdk-lib
+constructs>=10.0.0,<11.0.0
+sagemaker
+aws_cdk.aws_apigatewayv2_integrations_alpha
