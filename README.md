@@ -1,8 +1,7 @@
 # Intelligent shopping assistant solution on AWS
 
-The deployment guide here is CDK only. For manual deployment or detailed guide, refer to [Manual Deployment Guide]
-![Screenshot](./assets/function0.png)
 ![Screenshot](./assets/function1.png)
+![Screenshot](./assets/function0.png)
 
 
 ## Introduction
@@ -32,7 +31,7 @@ It offers the following key features:
 ## Prerequisites
 
 ### Operating System
-“CDK are optimized to best work to be initiated on **<Amazon Linux 2023 AMI>**.  Deployment in another OS may require additional steps.”
+CDK are optimized to best work to be initiated on **<Amazon Linux 2023 AMI>**.  Deployment in another OS may require additional steps.
 
 ### AWS account requirements
 
@@ -53,7 +52,7 @@ us-west-2, us-east-2, us-east-1, ap-south-1, ap-southeast-1, ap-southeast-2, ap-
 
 ### 0.Launch EC2 instance
 
-(1)	input name, such as ‘shopping_assistant’
+(1)	input a name of EC2
 
 ![EC2](./assets/ec2-1.png)
 
@@ -114,6 +113,8 @@ Deploy resources with reference to ./deployment/Resource_deployment_README.md
 
 ### 2. model deployment
 
+Optional, if you need customized models to be deployed.
+
 In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
 
 * open Embedding_Model/bge_m3_deploy.ipynb to deploy the text search model
@@ -123,7 +124,7 @@ In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
 * open Image_embedding_Model/deploy-clip-image-embedding.ipynb to deploy the image search model
 
 
-### 3. webUI deployment
+### 3. WebUI deployment
 
 Deploy webUI with reference to ./web_ui/UI_deployment_README.md
 

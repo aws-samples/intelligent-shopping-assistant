@@ -68,17 +68,17 @@ streamlit run shopping_assistant_demo.py
 
 ### 6.Open ui page
 
-Enter the url in the webpage：http://<EC2 public IP>
+Enter the url in the webpage：http://EC2 public IP
 
 ### 7.configure the invoke url
 
-(1) copy the text search invoke url from api gateway
+(1) copy the product search invoke url from api gateway
 
-![EC2](../assets/text-search.png)
+![EC2](../assets/product-search.png)
 
 paste the invoke url into the webpage api url input box
 
-![EC2](../assets/text-search-ui.png)
+![EC2](../assets/product-search-ui.png)
 
 (2) copy the image search invoke url from api gateway
 

@@ -71,7 +71,8 @@ cdk deploy --all
 6. The CDK deployment will provide 3 CloudFormation stacks with relevant resouces like Lambda, API Gateway, OpenSearch instance and SageMaker notebook etc.
 
 7. Login with Secret Manager account and password in OpenSearch. Finish the settings with manual part inside
-8. Open Sagemaker Jyputerlab instance and the repositories will be automatically downloaded into the environment, play with relevant notebook scripts to deploy Sagemaker endpoint.For notebook setup, please refer the guideline named with "DeployGuide-LLM&Search-V2.pdf" in the root directory
+8. Open Sagemaker Jyputerlab instance and the repositories will be automatically downloaded into the environment, play with relevant notebook scripts to deploy Sagemaker endpoint.For notebook setup.
+
 
 ### Clean Up
 When you don't need the environment and want to clean it up, run:
