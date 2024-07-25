@@ -58,7 +58,35 @@ Change the xxx.xxx.xxx.xxx to the EC2 private IP.
 sudo systemctl start nginx.service
 ```
 
-### 5.Run streamlit ui stript
+
+### 5.configure the invoke url
+
+Open the intelligent_shopping_assistant/web_ui/pages/Assistant.py,Fill in the following parameters:
+
+![EC2](../assets/configurations.png)
+
+(1) copy the index name to the 'index' parameters
+
+(2) copy the assistant invoke url from api gateway
+
+![EC2](../assets/assistant.png)
+
+paste the invoke url to the 'assistant_invoke_url' parameters
+
+(3) copy the product search invoke url from api gateway
+
+![EC2](../assets/product-search.png)
+
+paste the invoke url to the 'product_search_invoke_url' parameters
+
+(4) [optional] copy the data load invoke url from api gateway
+
+![EC2](../assets/data-load.png)
+
+paste the invoke url to the webpage api url input box
+
+
+### 6.Run streamlit ui stript
 
 ```
 cd /home/ec2-user/intelligent_shopping_assistant/web_ui
@@ -66,32 +94,6 @@ tmux
 streamlit run shopping_assistant_demo.py
 ```
 
-### 6.Open ui page
+### 7.Open ui page
 
 Enter the url in the webpage：http://EC2 public IP
-
-### 7.configure the invoke url
-
-(1) copy the product search invoke url from api gateway
-
-![EC2](../assets/product-search.png)
-
-paste the invoke url into the webpage api url input box
-
-![EC2](../assets/product-search-ui.png)
-
-(2) copy the image search invoke url from api gateway
-
-![EC2](../assets/image-search.png)
-
-paste the invoke url into the webpage api url input box
-
-![EC2](../assets/image-search-ui.png)
-
-(3) copy the data load invoke url from api gateway
-
-![EC2](../assets/data-load.png)
-
-paste the invoke url into the webpage api url input box
-
-![EC2](../assets/data-load-ui.png)

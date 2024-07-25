@@ -75,24 +75,12 @@ us-west-2, us-east-2, us-east-1, ap-south-1, ap-southeast-1, ap-southeast-2, ap-
     b.In the Select trusted entity page, select EC2 in the Use case and click next
     
     c.Select role:
-    
-        •	AmazonOpenSearchServiceFullAccess
         
         •	AmazonS3FullAccess
-        
-        •	AmazonSageMakerFullAccess
-        
-        •	AWSCloudFormationFullAccess
-        
-        •	SecretsManagerReadWrite
         
         Create the role
         
     d.Select the role in the IAM instance profile
-    
-![EC2](./assets/ec2-6.png)
-
-![EC2](./assets/ec2-7.png)
     
 (7)	Launch the EC2 and Connect the EC2
 
@@ -113,7 +101,7 @@ Deploy resources with reference to ./deployment/Resource_deployment_README.md
 
 ### 2. model deployment
 
-Optional, if you need customized models to be deployed.
+Optional, if you need customized models to be deployed. otherwise use the models in bedrock.
 
 In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
 
@@ -129,17 +117,19 @@ In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
 Deploy webUI with reference to ./web_ui/UI_deployment_README.md
 
 
-### 4. Online data load
+### 4. data load
 
-In the the web ui page, open data_load page to load data. 
+Choose one of the following two methods
 
-
-### 5. Offline data load
+#### offline data load
 
 In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
 
 * open Import_data_to_opensearch/data_load_csv.ipynb to load the product information with csv format
 
+#### online data load
+
+In the the web ui page, open data_load page to load data. 
 
 
 ## Security
