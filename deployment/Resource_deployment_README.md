@@ -50,17 +50,7 @@ cdk bootstrap aws://[your-account-id]/[your-region]
 you can install the required dependencies.
 
 
-4. Deploy stacks Settings in cdk.json
-Configurate parameters:
-```
-    "embedding_endpoint_name"
-    "llm_embedding_name"
-    "language"
-    "index"
-```
-
-
-5. Below command will validate the environment and generate CloudFormation.json 
+4. Below command will validate the environment and generate CloudFormation.json 
 ```
 cdk synth
 ```
@@ -68,10 +58,10 @@ If everything is good, then
 ```
 cdk deploy --all
 ```
-6. The CDK deployment will provide 3 CloudFormation stacks with relevant resouces like Lambda, API Gateway, OpenSearch instance and SageMaker notebook etc.
+5. The CDK deployment will provide 3 CloudFormation stacks with relevant resouces like Lambda, API Gateway, OpenSearch instance and SageMaker notebook etc.
 
-7. Login with Secret Manager account and password in OpenSearch. Finish the settings with manual part inside
-8. Open Sagemaker Jyputerlab instance and the repositories will be automatically downloaded into the environment, play with relevant notebook scripts to deploy Sagemaker endpoint.For notebook setup.
+6. Login with Secret Manager account and password in OpenSearch. Finish the settings with manual part inside
+7. Open Sagemaker Jyputerlab instance and the repositories will be automatically downloaded into the environment, play with relevant notebook scripts to deploy Sagemaker endpoint.For notebook setup.
 
 
 ### Clean Up

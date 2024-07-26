@@ -63,25 +63,39 @@ sudo systemctl start nginx.service
 
 Open the intelligent_shopping_assistant/web_ui/pages/Assistant.py,Fill in the following parameters:
 
-![EC2](../assets/configurations.png)
+![API](../assets/configurations.png)
 
 (1) copy the index name to the 'index' parameters
 
 (2) copy the assistant invoke url from api gateway
 
-![EC2](../assets/assistant.png)
+![API](../assets/assistant.png)
 
 paste the invoke url to the 'assistant_invoke_url' parameters
 
 (3) copy the product search invoke url from api gateway
 
-![EC2](../assets/product-search.png)
+![API](../assets/product-search.png)
 
 paste the invoke url to the 'product_search_invoke_url' parameters
 
-(4) [optional] copy the data load invoke url from api gateway
+(4) copy the ads invoke url from api gateway
 
-![EC2](../assets/data-load.png)
+![API](../assets/ads.png)
+
+paste the invoke url to the 'ads_invoke_url' parameters
+
+(5) in the Sagemaker->Inference->Endpoints
+
+![Endpoints](../assets/endpoints.png)
+
+copy the 'bge-m3-xxx' to 'product_search_sagemaker_endpoint' parameters
+
+copy the 'bge-m3-reranker' to 'reranker_sagemaker_endpoint' parameters
+
+(5) [optional] copy the data load invoke url from api gateway
+
+![API](../assets/data-load.png)
 
 paste the invoke url to the webpage api url input box
 

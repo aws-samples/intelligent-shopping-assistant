@@ -101,15 +101,13 @@ Deploy resources with reference to ./deployment/Resource_deployment_README.md
 
 ### 2. model deployment
 
-Optional, if you need customized models to be deployed. otherwise use the models in bedrock.
-
 In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
-
-* open Embedding_Model/bge_m3_deploy.ipynb to deploy the text search model
 
 * open Reranking_Model/bge_m3_reranker_deploy.ipynb to deploy the reranker model
 
-* open Image_embedding_Model/deploy-clip-image-embedding.ipynb to deploy the image search model
+* open Embedding_Model/bge_m3_deploy.ipynb to deploy the text search model
+
+* 【Optional】open Image_embedding_Model/deploy-clip-image-embedding.ipynb to deploy the image search model
 
 
 ### 3. WebUI deployment

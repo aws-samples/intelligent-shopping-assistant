@@ -13,19 +13,23 @@ import time
 import os
 import ast
 
-assistant_invoke_url = ''
-image_search_invoke_url = ''
-ads_invoke_url = ''
-product_search_invoke_url = ''
 
+index = ''
 language = 'english'
 account=''
 region='us-east-1'
 
-index = ''
-image_search_sagemaker_endpoint = ''
+assistant_invoke_url = ''
+ads_invoke_url = ''
+product_search_invoke_url = ''
+
 product_search_sagemaker_endpoint = ""
 reranker_sagemaker_endpoint = ''
+
+#Optional
+image_search_invoke_url = ''
+image_search_sagemaker_endpoint = ''
+
 
 conversation_rounds = 6
 
