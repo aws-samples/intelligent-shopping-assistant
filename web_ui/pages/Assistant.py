@@ -15,9 +15,9 @@ import ast
 
 
 index = ''
-language = 'english'
+language = '' #english or chinese
 account=''
-region='us-east-1'
+region=''
 
 assistant_invoke_url = ''
 ads_invoke_url = ''
