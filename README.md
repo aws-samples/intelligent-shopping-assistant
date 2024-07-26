@@ -101,7 +101,7 @@ Deploy resources with reference to ./deployment/Resource_deployment_README.md
 
 ### 2. model deployment
 
-In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook -> intelligent_shopping_assistant/model
+In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent_shopping_assistant/model
 
 * open /reranking_model/bge_m3_reranker_deploy.ipynb to deploy the reranker model
 
@@ -121,7 +121,7 @@ Choose one of the following two methods
 
 #### offline data load
 
-In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook -> intelligent_shopping_assistant/data_load_offline
+In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent_shopping_assistant/data_load_offline
 
 * open /opensearch/data_load_csv.ipynb to load the product information with csv format
 
