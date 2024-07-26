@@ -32,6 +32,7 @@ image_search_sagemaker_endpoint = ''
 
 
 conversation_rounds = 6
+model_name = "anthropic.claude-3-sonnet-20240229-v1:0"
 
 ads_prompt = """
 You are an e-commerce customer service staff. Please generate a shopping guide for the products based on the user's questions and products information.
@@ -80,7 +81,8 @@ def get_history(messages,k:int=3):
 def product_search(query,
                 invoke_url,
                 index,
-                endpoint_name: str = '',
+                modelName: str = '',
+                endpointName: str = '',
                 rerankerEndpoint: str = '',
                 searchType: str = 'text',
                 textSearchNumber: int = 3,
@@ -92,14 +94,16 @@ def product_search(query,
                 productName: str = '',
                 description: str= '',
                 keywords: str='',
-                                filter_item_id: list=[]
+                filter_item_id: list=[]
                 ):
     url = invoke_url + '/product_search?'
     url += ('&query='+query)
     url += ('&searchType='+searchType)
     url += ('&index='+index)
-    if len(endpoint_name) > 0:
-        url += ('&embeddingEndpoint='+endpoint_name)
+    if len(modelName) > 0:
+        url += ('&modelName='+modelName)
+    if len(endpointName) > 0:
+        url += ('&embeddingEndpoint='+endpointName)
     if len(rerankerEndpoint) > 0:
         url += ('&rerankerEndpoint='+rerankerEndpoint)
     if textSearchNumber > 0:
@@ -133,12 +137,13 @@ def product_search(query,
     return products
 
 
-def get_item_ads(query,items_info,prompt,model_name:str="anthropic.claude-3-sonnet-20240229-v1:0"):
+def get_item_ads(query,items_info,prompt,model_name:str=""):
     url = ads_invoke_url + '/get_item_ads?query='
     url += query
     url += ('&itemInfo='+items_info)
     url += ('&prompt='+prompt)
-    url += ('&modelName='+model_name)
+    if len(model_name) > 0:
+        url += ('&modelName='+model_name)
     url += ('&modelType=bedrock')
     url += ('&language=chinese')
 
@@ -371,6 +376,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
                             query = answer.split('keywords:')[-1]
                             products = product_search(query,
                                   product_search_invoke_url,
+                                  model_name,
                                   index,
                                   product_search_sagemaker_endpoint,
                                   reranker_sagemaker_endpoint,
@@ -412,7 +418,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
                             print('item:',item)
                             st.session_state.item_ids.append(item[item_id_coloum_name])
 
-                        products_ad = get_item_ads(query,str(source_list),ads_prompt)
+                        products_ad = get_item_ads(query,str(source_list),ads_prompt,model_name)
                         st.write(products_ad)
                         response = products_ad
                         
