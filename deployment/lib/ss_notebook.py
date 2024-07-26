@@ -68,7 +68,7 @@ class NotebookStack(cdk.Stack):
                 content=cdk.Fn.base64(f"""
                     #!/bin/bash
                     cd home/ec2-user/SageMaker
-                    git clone -b jupyter --single-branch https://github.com/paulhebo/intelligent_shopping_guide.git
+                    git clone -b main --single-branch https://github.com/aws-samples/intelligent-shopping-assistant.git
                     chmod -R 777 ./
 
                 """)

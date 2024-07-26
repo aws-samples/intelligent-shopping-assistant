@@ -101,13 +101,13 @@ Deploy resources with reference to ./deployment/Resource_deployment_README.md
 
 ### 2. model deployment
 
-In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
+In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook -> intelligent_shopping_assistant/model
 
-* open Reranking_Model/bge_m3_reranker_deploy.ipynb to deploy the reranker model
+* open /reranking_model/bge_m3_reranker_deploy.ipynb to deploy the reranker model
 
-* open Embedding_Model/bge_m3_deploy.ipynb to deploy the text search model
+* open /text_embedding_Model/bge_m3_deploy.ipynb to deploy the text embedding model
 
-* 【Optional】open Image_embedding_Model/deploy-clip-image-embedding.ipynb to deploy the image search model
+* 【Optional】open image_embedding_model/deploy-clip-image-embedding.ipynb to deploy the image embedding model
 
 
 ### 3. WebUI deployment
@@ -121,9 +121,9 @@ Choose one of the following two methods
 
 #### offline data load
 
-In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook
+In the Amazon SageMaker -> Notebook instances -> SearchGuideNotebook -> intelligent_shopping_assistant/data_load_offline
 
-* open Import_data_to_opensearch/data_load_csv.ipynb to load the product information with csv format
+* open /opensearch/data_load_csv.ipynb to load the product information with csv format
 
 #### online data load
 
