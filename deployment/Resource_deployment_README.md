@@ -6,6 +6,7 @@ Please make sure you have over 14 GB memory and Python 3 and npm installed on yo
 If there's no npm, install via nvm:
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
 ```
 Note the v0.39.3 is just an example, download your preferred version.Then close and reopen terminal, then
 
@@ -33,6 +34,7 @@ npm install -g aws-cdk
 3. Bootstrap the CDK to provision all the infrastructure needed for the CDK to make changes to your AWS account
 
 ```
+sudo yum install python3-pip
 pip install -r requirements.txt
 ```
 (precondition: you have installed pip via "sudo apt install python3-pip")
@@ -56,7 +58,7 @@ cdk synth
 ```
 If everything is good, then
 ```
-cdk deploy --all
+cdk deploy --all --no-roll-back --require-approval never
 ```
 5. The CDK deployment will provide 3 CloudFormation stacks with relevant resouces like Lambda, API Gateway, OpenSearch instance and SageMaker notebook etc.
 

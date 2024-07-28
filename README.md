@@ -110,12 +110,7 @@ In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intell
 * 【Optional】open image_embedding_model/deploy-clip-image-embedding.ipynb to deploy the image embedding model
 
 
-### 3. WebUI deployment
-
-Deploy webUI with reference to  [UI_deployment_README](https://github.com/aws-samples/intelligent-shopping-assistant/blob/main/web_ui/UI_deployment_README.md)
-
-
-### 4. data load
+### 3. data load
 
 Choose one of the following two methods
 
@@ -123,11 +118,18 @@ Choose one of the following two methods
 
 In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent_shopping_assistant/data_load_offline
 
-* open /opensearch/data_load_csv.ipynb to load the product information with csv format
+* open /opensearch/data_load_csv.ipynb to load the product information with csv format, need to replace the "textEmbeddingEndpoint" parameters.
 
 #### online data load
 
 In the the web ui page, open data_load page to load data. 
+
+
+### 4. WebUI deployment
+
+Deploy webUI with reference to  [UI_deployment_README](https://github.com/aws-samples/intelligent-shopping-assistant/blob/main/web_ui/UI_deployment_README.md)
+
+
 
 
 ## Security

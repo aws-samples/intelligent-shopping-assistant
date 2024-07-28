@@ -51,6 +51,7 @@ server {
 
 Change the xxx.xxx.xxx.xxx to the EC2 private IP.
 
+![IP](../assets/ip.png)
 
 ### 4. start nginx
 
@@ -61,7 +62,7 @@ sudo systemctl start nginx.service
 
 ### 5.configure the invoke url
 
-Open the intelligent_shopping_assistant/web_ui/pages/Assistant.py,Fill in the following parameters:
+Open the /home/ec2-user/intelligent-shopping-assistant/web_ui/pages/Assistant.py,Fill in the following parameters:
 
 ![API](../assets/configurations.png)
 
@@ -103,7 +104,7 @@ paste the invoke url to the webpage api url input box
 ### 6.Run streamlit ui stript
 
 ```
-cd /home/ec2-user/intelligent_shopping_assistant/web_ui
+cd /home/ec2-user/intelligent-shopping-assistant/web_ui
 tmux
 streamlit run shopping_assistant_demo.py
 ```

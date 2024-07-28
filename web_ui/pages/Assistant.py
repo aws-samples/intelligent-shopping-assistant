@@ -14,8 +14,8 @@ import os
 import ast
 
 
-index = ''
-language = '' #english or chinese
+index = 'shopping_demo_test'
+language = 'english' #english or chinese
 account=''
 region=''
 
