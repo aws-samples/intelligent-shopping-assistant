@@ -46,7 +46,7 @@ CDK are optimized to best work to be initiated on **<Amazon Linux 2023 AMI>**.  
 
 ### Supported Regions
 
-us-west-2, us-east-2, us-east-1, ap-south-1, ap-southeast-1, ap-southeast-2, ap-northeast-1, eu-central-1, eu-west-1, eu-west-3, or any other region that supports the services (bedrock) used in the Guidance.
+us-west-2, us-east-1, us-east-2, ap-south-1, ap-southeast-1, ap-southeast-2, ap-northeast-1, eu-central-1, eu-west-1, eu-west-3, or any other region that supports the services (bedrock) used in the Guidance.
 
 ## Deployment Steps
 
@@ -101,7 +101,7 @@ Deploy resources with reference to [Resource_deployment_README](https://github.c
 
 ### 2. model deployment
 
-In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent_shopping_assistant/model
+In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent-shopping-assistant/model
 
 * open /reranking_model/bge_m3_reranker_deploy.ipynb to deploy the reranker model
 
@@ -116,7 +116,7 @@ Choose one of the following two methods
 
 #### offline data load
 
-In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent_shopping_assistant/data_load_offline
+In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent-shopping-assistant/data_load_offline
 
 * open /opensearch/data_load_csv.ipynb to load the product information with csv format, need to replace the "textEmbeddingEndpoint" parameters.
 
