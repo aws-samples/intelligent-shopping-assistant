@@ -96,7 +96,7 @@ git clone https://github.com/aws-samples/intelligent-shopping-assistant.git
 
 ### 1. Lambda and OpenSearch deployment
 
-Deploy resources with reference to ./deployment/Resource_deployment_README.md
+Deploy resources with reference to [Resource_deployment_README](https://github.com/aws-samples/intelligent-shopping-assistant/blob/main/deployment/Resource_deployment_README.md)
 
 
 ### 2. model deployment
@@ -112,7 +112,7 @@ In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intell
 
 ### 3. WebUI deployment
 
-Deploy webUI with reference to ./web_ui/UI_deployment_README.md
+Deploy webUI with reference to  [UI_deployment_README](https://github.com/aws-samples/intelligent-shopping-assistant/blob/main/web_ui/UI_deployment_README.md)
 
 
 ### 4. data load
