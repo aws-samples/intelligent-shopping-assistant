@@ -118,7 +118,7 @@ Choose one of the following two methods
 
 In the Amazon SageMaker -> Notebook instances -> ShoppingGuideNotebook -> intelligent-shopping-assistant/data_load_offline
 
-* open /opensearch/data_load_csv.ipynb to load the product information with csv format, need to replace the "textEmbeddingEndpoint" parameters.
+* open /opensearch/data_load_csv.ipynb to load the product information with csv format, need to replace the "textEmbeddingEndpoint" parameters with the endpoint of bge-m3 model.
 
 #### online data load
 
