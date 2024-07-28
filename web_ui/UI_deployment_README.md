@@ -49,7 +49,7 @@ server {
   }
 ```
 
-Change the xxx.xxx.xxx.xxx to the EC2 private IP.
+Replace the xxx.xxx.xxx.xxx with the EC2 private IP.
 
 ![IP](../assets/ip.png)
 
@@ -66,7 +66,7 @@ Open the /home/ec2-user/intelligent-shopping-assistant/web_ui/pages/Assistant.py
 
 ![API](../assets/configurations.png)
 
-(1) copy the index name to the 'index' parameters
+(1) copy the account and region to the 'account' and 'region' parameters
 
 (2) copy the assistant invoke url from api gateway
 
