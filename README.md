@@ -129,7 +129,7 @@ In the the web ui page, open data_load page to load data.
 
 Deploy webUI with reference to  [UI_deployment_README](https://github.com/aws-samples/intelligent-shopping-assistant/blob/main/web_ui/UI_deployment_README.md)
 
-
+Test on the Assistant page, use the query as "I want to buy a pair of comfortable sports shoes".
 
 
 ## Security
