@@ -376,8 +376,8 @@ if st.session_state.messages[-1]["role"] != "assistant":
                             query = answer.split('keywords:')[-1]
                             products = product_search(query,
                                   product_search_invoke_url,
-                                  model_name,
                                   index,
+                                  model_name,
                                   product_search_sagemaker_endpoint,
                                   reranker_sagemaker_endpoint,
                                   search_type,
